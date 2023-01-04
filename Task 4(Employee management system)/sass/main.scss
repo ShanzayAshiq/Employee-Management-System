@@ -1,0 +1,391 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+@mixin flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin rect($width, $height, $margin-top) {
+  width: $width;
+  height: $height;
+  margin-top: $margin-top;
+  background: #ffffff;
+  border-radius: 27.2478px;
+}
+
+@mixin bottom_rectangle($height, $radius) {
+  height: $height;
+  border-radius: $radius;
+}
+
+@mixin rotate {
+  font-weight: 600;
+  font-size: 15.3755px;
+  color: #696974;
+  writing-mode: vertical-lr;
+}
+
+@mixin border($width) {
+  border-style: solid;
+  border-color: #f1f1f1;
+  border-width: $width;
+}
+
+@mixin text {
+  margin: 10px 0 0 31px;
+  p {
+    font-weight: 500;
+    font-size: 16.6568px;
+  }
+  span {
+    color: #8f92a1;
+    font-weight: 400;
+    font-size: 14.0942px;
+  }
+}
+
+@mixin rectangle {
+  @include flex();
+  justify-content: space-between;
+  background: #f1f6ff;
+}
+
+.main {
+  width: 2400px;
+  background: #e1eaf5;
+  margin: auto;
+}
+.container {
+  display: flex;
+  width: 1983.41px;
+  height: 1292px;
+  background: #f5f9ff;
+  border-radius: 56.7663px;
+  margin: auto;
+  margin-top: 200px;
+}
+.side_menu {
+  background: #1f95ee;
+  border-radius: 56.7663px 0 0 56.7663px;
+  .upper,
+  .middle {
+    @include flex();
+    flex-direction: column;
+    #Hamburger {
+      margin-top: 104px;
+      margin-bottom: 111px;
+    }
+    #Vector {
+      margin-bottom: 120px;
+    }
+  }
+  .middle {
+    gap: 75px;
+  }
+  .logout {
+    margin: 307px 40px 0 40px;
+  }
+}
+
+// center
+.center {
+  margin: 70px 29px 102px 100px;
+  .header {
+    span {
+      font-size: 49.9543px;
+      letter-spacing: -1.13533px;
+      font-weight: 600;
+      margin-right: 39.74px;
+    }
+    #teams {
+      border: none;
+      background: none;
+      font-weight: 500;
+      font-size: 20.4359px;
+    }
+  }
+  .center_rect {
+    @include rect(499.54px, 965.03px, 80px);
+    padding: 53.36px 58px 81.74px 44px;
+    .profile {
+      @include flex();
+      justify-content: space-between;
+      padding: 0 5.5px 0 14px;
+      .info {
+        h1 {
+          font-size: 26.11px;
+          margin-top: 16px;
+        }
+        p {
+          color: rgba(23, 23, 23, 0.8);
+          font-size: 15.8946px;
+          margin-bottom: 30px;
+        }
+        .salary {
+          color: rgba(0, 0, 0, 0.6);
+          font-size: 12.4886px;
+          margin-bottom: 0;
+          span {
+            margin-left: 21.57px;
+          }
+        }
+      }
+    }
+    .line_chart {
+      margin: 76px 5px 40px 16px;
+      .title {
+        @include flex();
+        justify-content: space-between;
+        font-size: 15.8946px;
+        font-weight: 500;
+      }
+      #myChart {
+        width: 381.47px;
+        height: 199.82px;
+        margin-top: 20px;
+      }
+    }
+  }
+}
+.radar_chart {
+  #mychart {
+    width: 388.26px;
+    height: 281.56px;
+  }
+}
+
+// right
+.right {
+  margin: 70px 100px 102px 20px;
+  .search {
+    @include flex();
+    justify-content: space-between;
+    .search_btn {
+      @include flex();
+      align-items: flex-end;
+      img {
+        margin: 32px 20.44px 0 5px;
+      }
+      #search {
+        border: none;
+        background: none;
+        font-size: 15.8946px;
+      }
+    }
+    .icon_images {
+      margin-top: 23px;
+      #message {
+        margin-right: 88px;
+      }
+      #notification {
+        margin-right: 2px;
+      }
+    }
+  }
+  .rect_upper {
+    display: flex;
+    gap: 27px;
+    .progress {
+      @include rect(295.18px, 229.34px, 80px);
+      padding: 34px;
+      .title {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 8px;
+        color: #808191;
+      }
+      .content {
+        display: flex;
+        flex-direction: column;
+        margin-top: 31px;
+        span {
+          font-size: 49.9543px;
+        }
+      }
+    }
+    .bundle {
+      @include rect(456.4px, 230.47px, 80px);
+      padding: 34px 57px 48px 47px;
+      .bundle_text {
+        display: flex;
+        .logo {
+          margin-right: 19px;
+        }
+        .context {
+          width: 170px;
+          p {
+            font-weight: 500;
+            font-size: 22.7065px;
+          }
+          span {
+            font-size: 17.0299px;
+            letter-spacing: -0.607298px;
+            color: #8f92a1;
+          }
+        }
+        .dots {
+          margin-left: 94px;
+          margin-top: 20px;
+        }
+      }
+      .members {
+        margin-top: 50px;
+        display: flex;
+        gap: 14px;
+      }
+    }
+  }
+  .rect_bottom {
+    @include rect(100%, 686.87px, 47.23px);
+    display: flex;
+    .bottom_left {
+      width: 10%;
+      p {
+        @include rotate();
+      }
+      .pending,
+      .progress,
+      .done {
+        display: flex;
+        justify-content: end;
+      }
+      .pending {
+        @include bottom_rectangle(52.6%, 27.2478px 0 0 0);
+        align-items: end;
+        @include border(0 1.28px 1.28px 0);
+        p {
+          margin: 0 15px 40px 0;
+        }
+      }
+      .progress {
+        @include bottom_rectangle(20%, 0);
+        @include border(0 1.28px 1.28px 0);
+        align-items: center;
+        p {
+          margin: 0 15px;
+        }
+      }
+      .done {
+        @include bottom_rectangle(27.4%, 0 0 0 27.2478px);
+        @include border(0 1.28px 0 0);
+        align-items: flex-start;
+        p {
+          margin: 13px;
+        }
+      }
+    }
+    .bottom_right {
+      display: flex;
+      flex-direction: column;
+      width: 90%;
+      .text {
+        @include text();
+      }
+      .pending_right {
+        .calendar {
+          margin: 10px 0 35px 0;
+        }
+        @include bottom_rectangle(52.6%, 0 27.2478px 0 0);
+        @include border(0 0 1.28px 0);
+        .strategy {
+          margin-left: 186px;
+          .rectangle {
+            @include rect(681.65px, 87.13px, 0);
+            @include rectangle();
+          }
+          .images {
+            display: flex;
+            margin-right: 30px;
+            gap: 15px;
+          }
+        }
+      }
+      .progress_right {
+        @include bottom_rectangle(20%, 0);
+        @include border(0 0 1.28px 0);
+        @include flex();
+        gap: 31px;
+        .rectangle {
+          @include rect(458.7px, 87.13px, 0);
+          @include rectangle();
+          background: #ff5d6d;
+          color: white;
+          span {
+            color: #eff0f2;
+          }
+          img {
+            margin-right: 28px;
+          }
+          margin-left: 60px;
+        }
+        .test {
+          @include rect(146.46px, 86.28px, 0);
+          @include flex();
+          background: #f1f6ff;
+          .text {
+            margin-left: 15px;
+          }
+          .img {
+            margin: 0 12px 50px 8px;
+          }
+        }
+      }
+
+      .done_right {
+        @include bottom_rectangle(27.4%, 0 0 27.2478px 0);
+        .rectangle {
+          @include rect(527.8px, 72.23px, 0);
+          @include rectangle();
+          margin: 29px 0 0 53px;
+          .text {
+            p {
+              text-decoration-line: line-through;
+            }
+            span {
+              text-decoration-line: line-through;
+            }
+          }
+          .images {
+            @include flex();
+            gap: 10px;
+          }
+        }
+      }
+    }
+  }
+}
+
+.mbsc-ios.mbsc-datepicker-inline {
+  height: 200px;
+}
+.mbsc-ios.mbsc-calendar-header {
+  margin-top: 15px;
+  font-size: 17.9381px;
+}
+.mbsc-calendar-month {
+  color: black;
+}
+.mbsc-calendar-year,
+.mbsc-ltr {
+  color: #8f92a1;
+}
+.mbsc-ios.mbsc-calendar-controls {
+  margin-bottom: 30px;
+}
+
+.mbsc-flex-1-0 {
+  font-size: 20px;
+  margin-top: 10px;
+}
+.mbsc-ios.mbsc-datepicker-inline {
+  background: #fff;
+  border-color: #ccc;
+  border: none;
+}
